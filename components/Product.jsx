@@ -29,7 +29,7 @@ const Product = ({ product }) => {
   const dispatch = useDispatch();
   return (
     <div
-      className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer h-full mx-auto relative"
+      className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer w-full h-full mx-auto relative"
       style={{
         border: "0.5px solid rgb(232, 232, 232)",
         boxShadow: "rgba(0, 0, 0, 0.04) 2px 2px 8px",
@@ -74,12 +74,12 @@ const Product = ({ product }) => {
                 dispatch(addToCart({ item: { ...product, count } }));
                 notify();
               }}
-              className=" ml-auto  py-1 px-2 rounded-lg border-2 border-black text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center"
+              className=" ml-auto py-1 px-1 rounded-lg border-2 border-black text-sm font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center"
               type="submit"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="mr-2 h-6 w-6"
+                class=" h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
