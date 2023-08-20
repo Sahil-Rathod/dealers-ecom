@@ -32,14 +32,14 @@ const Home = ({
 
     {/* Categories  */}
 
-    <div className="w-full max-w-[1280px] px-5 md:px-10 mx-auto">
+    <div className="w-full max-w-[1280px]  mx-auto">
       <div className="text-center max-w-[800px] mx-auto my-[10px] md:my-[40px]">
         <h2 className="text-[28px] md:text-[34px]  font-semibold leading-tight">
           Shop by categories
         </h2>
       </div>
 
-      <div className="flex flex-wrap gap-5  px-5 md:px-0 items-center justify-center">
+      <div className="flex flex-wrap gap-5  items-center justify-center">
         {categories?.map((category) => (
           <Category key={category._id} category={category} />
         ))}
