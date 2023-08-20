@@ -32,8 +32,8 @@ const Home = ({
 
     {/* Categories  */}
 
-    <div className="w-full max-w-[1280px]  mx-auto">
-      <div className="text-center max-w-[800px] mx-auto my-[10px] md:my-[40px]">
+    <div className="w-full pt-20 max-w-[1280px]  mx-auto">
+      <div className="text-center pb-8 max-w-[800px] mx-auto my-[10px] md:my-[40px]">
         <h2 className="text-[28px] md:text-[34px]  font-semibold leading-tight">
           Shop by categories
         </h2>
@@ -48,8 +48,11 @@ const Home = ({
 
     {/*Brands Categories  */}
 
-    <div className="w-full max-w-[1280px] px-5 md:px-10 mx-auto">
-      <div className="text-center max-w-[800px] mx-auto my-[10px] md:my-[40px]">
+    <div
+      id="brands"
+      className="w-full max-w-[1280px] pt-20 px-5 md:px-10 mx-auto"
+    >
+      <div className="text-center max-w-[800px] pb-8 mx-auto my-[10px] md:my-[40px]">
         <h2 className="text-[28px] md:text-[34px]  font-semibold leading-tight">
           Top Brands
         </h2>
