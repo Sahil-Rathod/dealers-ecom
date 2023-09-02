@@ -15,7 +15,7 @@ const BrandsCategory = ({ brand: { image, brandsName, slug } }) => {
     //       <button>
     //         <div className="absolute bottom-12 flex justify-center items-center font- w-[75%] h-12 bg-white left-4 right-0">
     //           <h1>{brandsName}</h1>
-    //         </div>
+    //         </div>3
     //       </button>
     //       {/* </a> */}
     //       {/* </Link> */}
@@ -23,11 +23,13 @@ const BrandsCategory = ({ brand: { image, brandsName, slug } }) => {
     //   </Link>
     // </div>
     <div className="">
-      <div className="flex flex-col flex-wrap items-center pb-10">
+      {/* {alert(brandsName)} */}
+      {console.log(brandsName)}
+      <div className="flex flex-col flex-wrap mb-16 items-center pb-10">
         <Link href={`/brands/${slug.current}`}>
-          <div className="w-40 h-40 mb-3 cursor-pointer rounded-full shadow-2xl flex justify-center items-center">
+          <div className="w-48 h-48 mb-3 cursor-pointer rounded-full shadow-2xl flex justify-center items-center">
             <img
-              class="w-[50%] h-[30%] "
+              class="w-[50%] h-[30%]"
               src={urlFor(image).url()}
               alt="Bonnie image"
             />

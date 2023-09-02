@@ -53,7 +53,7 @@ const Header = ({ product, info, categories }) => {
         <Link href="/">
           <img
             src={info[0] ? urlFor(info[0].logo).url() : ""}
-            className="w-[40px] md:w-[60px]"
+            className="w-[80px] md:w-[100px] h-10"
           />
         </Link>
 

@@ -9,8 +9,10 @@ import {
   Footer,
 } from "../components";
 import MiniBanners from "../components/MiniBanners";
+import LogoSlider from "../components/LogoSlider";
 import Header from "../components/Header";
 import Brands from "../components/Brands";
+import Counter from "../components/Counter";
 import { RiWhatsappFill } from "react-icons/ri";
 import { IconContext } from "react-icons";
 
@@ -25,14 +27,17 @@ const Home = ({
   infoData,
 }) => (
   <div>
+    {console.log(brands)}
+    {console.log(miniBannerData)}
     <Header product={productData} info={infoData} categories={categories} />
 
     <HeroBanner heroBanner={bannerData} />
     <MiniBanners miniBanner={miniBannerData} />
+    <LogoSlider logoSlider={brands} />
 
     {/* Categories  */}
 
-    <div className="w-full pt-20 max-w-[1280px]  mx-auto">
+    <div className="w-full pt-20 max-w-[1280px] mt-8 mx-auto">
       <div className="text-center pb-8 max-w-[800px] mx-auto my-[10px] md:my-[40px]">
         <h2 className="text-[28px] md:text-[34px]  font-semibold leading-tight">
           Shop by categories
@@ -48,29 +53,26 @@ const Home = ({
 
     {/*Brands Categories  */}
 
-    <div
+    {/* <div
       id="brands"
       className="w-full max-w-[1280px] pt-20 px-5 md:px-10 mx-auto"
     >
       <div className="text-center max-w-[800px] pb-8 mx-auto my-[10px] md:my-[40px]">
         <h2 className="text-[28px] md:text-[34px]  font-semibold leading-tight">
-          Top Brands
+          Shop by Brands
         </h2>
       </div>
 
-      <div className="flex flex-wrap gap-5  px-5 md:px-0 items-center justify-center">
+      <div className="flex flex-wrap md:px-0 items-center justify-center">
         {brands?.map((brand) => (
           // <h1>{brand.name}</h1>
           <BrandsCategory key={brand._id} brand={brand} />
         ))}
       </div>
-    </div>
-
-    {console.log(brands)}
-
+    </div> */}
     {/* Featured Products */}
 
-    <div className="w-full max-w-[1280px] px-5 md:px-10 mx-auto">
+    <div className="w-full max-w-[1280px] mt-40 px-5 md:px-10 mx-auto">
       <div className="text-center max-w-[800px] mx-auto my-[30px] md:my-[80px]">
         <h2 className="text-[28px] md:text-[34px]  font-semibold leading-tight">
           Our Featured Products
@@ -84,16 +86,18 @@ const Home = ({
       </div>
     </div>
 
+    {/* CountUp */}
+    <Counter />
     {/* Brand Data */}
-    <div className="w-full  px-5 md:px-10 mx-auto">
+    {/* <div className="w-full  px-5 md:px-10 mx-auto">
       <div className="text-center max-w-[800px] mx-auto mb-[10px] mt-[30px] md:mb-[30px] md:mt-[60px]">
         <h2 className="text-[28px] md:text-[34px]  font-semibold leading-tight">
           Brands We Work With
         </h2>
       </div>
-
       <Brands brands={brandData} />
-    </div>
+      {console.log(brandData)}
+    </div> */}
     <Footer info={infoData} />
     <a target="_blank" href={`https://wa.me/91${infoData[0]?.phoneNo}?`}>
       <IconContext.Provider value={{ color: "green" }}>

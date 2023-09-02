@@ -10,7 +10,7 @@ export default {
       name: 'name',
       title: 'Title',
       type: 'string',
-      validation: (Rule) => Rule.required(),
+      // validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -20,7 +20,7 @@ export default {
         source: 'name',
         maxLength: 96,
       },
-      validation: (Rule) => Rule.required(),
+      // validation: (Rule) => Rule.required(),
     },
     {
       name: 'image',
@@ -29,16 +29,16 @@ export default {
       options: {
         hotspot: true,
       },
-      validation: (Rule) => Rule.required(),
+      // validation: (Rule) => Rule.required(),
     },
-    {
-      name: 'brandsName',
-      title:
-        "brands Name [Keep if blank if you don't want brands name displayed or brands name is already present inside image]",
-      type: 'string',
-      options: {
-        hotspot: true,
-      },
-    },
+    // {
+    //   name: 'brandsName',
+    //   title:
+    //     "brands Name [Keep if blank if you don't want brands name displayed or brands name is already present inside image]",
+    //   type: 'string',
+    //   options: {
+    //     hotspot: true,
+    //   },
+    // },
   ],
 }

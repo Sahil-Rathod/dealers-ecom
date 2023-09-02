@@ -37,7 +37,7 @@ const HeroBanner = ({ heroBanner }) => {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <div className="  w-full max-w-[1360px] mx-auto">
+    <div className="w-full max-w-[1360px] mx-auto">
       <div className=" embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
@@ -45,7 +45,7 @@ const HeroBanner = ({ heroBanner }) => {
               <div key={index} className="embla__slide">
                 <a target="_blank" href={item.linkTo}>
                   <img
-                    className="rounded-xl"
+                    className="rounded-xl "
                     src={urlFor(item.image).url()}
                     alt=""
                   />
@@ -60,8 +60,8 @@ const HeroBanner = ({ heroBanner }) => {
           <button
             key={index}
             onClick={() => scrollTo(index)}
-            className={"embla__dot".concat(
-              index === selectedIndex ? " embla__dot--selected" : ""
+            className={"embla__dot after:bg-[#3E4095]".concat(
+              index === selectedIndex ? " embla__dot--selected " : " "
             )}
           />
         ))}

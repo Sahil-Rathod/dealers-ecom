@@ -11,20 +11,13 @@ const Brands = ({ brands }) => {
     Autoplay({ delay: 1000, stopOnMouseEnter: false }),
     WheelGesturesPlugin(),
   ]);
-  const [emblaRef2] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 1000, stopOnMouseEnter: false }),
-    WheelGesturesPlugin(),
-  ]);
-  const [emblaRef3] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 1000, stopOnMouseEnter: false }),
-    WheelGesturesPlugin(),
-  ]);
 
   return (
     <>
       <div className="embla mt-3 md:mt-8">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
+            {console.log(brands)}
             {brands?.map((item, index) => (
               <div className="embla__brands-slide" key={index}>
                 <img src={urlFor(item.image).url()} alt="" />
@@ -32,26 +25,6 @@ const Brands = ({ brands }) => {
             ))}
           </div>
         </div>
-        {/* <div className="embla__viewport" ref={emblaRef2}>
-          <div className="embla__container">
-            {brands?.map((item, index) => (
-              <div className="embla__brands-slide" key={index}>
-                <img src={urlFor(item.image).url()} alt="" />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="embla mt-3 md:mt-8">
-          <div className="embla__viewport" ref={emblaRef3}>
-            <div className="embla__container">
-              {brands?.map((item, index) => (
-                <div className="embla__brands-slide" key={index}>
-                  <img src={urlFor(item.image).url()} alt="" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div> */}
       </div>
     </>
   );
