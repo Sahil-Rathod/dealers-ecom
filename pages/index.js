@@ -23,21 +23,22 @@ const Home = ({
   featureProductsData,
   categories,
   brands,
+  brands2,
   brandData,
   infoData,
 }) => (
   <div>
-    {console.log(brands)}
-    {console.log(miniBannerData)}
+    {/* {console.log(brands)}
+    {console.log(miniBannerData)} */}
     <Header product={productData} info={infoData} categories={categories} />
 
     <HeroBanner heroBanner={bannerData} />
     <MiniBanners miniBanner={miniBannerData} />
-    <LogoSlider logoSlider={brands} />
+    {/* <LogoSlider logoSlider={brands2} /> */}
 
     {/* Categories  */}
 
-    <div className="w-full pt-20 max-w-[1280px] mt-8 mx-auto">
+    <div className="w-full max-w-[1280px] mx-auto">
       <div className="text-center pb-8 max-w-[800px] mx-auto my-[10px] md:my-[40px]">
         <h2 className="text-[28px] md:text-[34px]  font-semibold leading-tight">
           Shop by categories
@@ -86,7 +87,10 @@ const Home = ({
       </div>
     </div>
 
+    <LogoSlider logoSlider={brands} logoSlider2={brands2} />
+
     {/* CountUp */}
+
     <Counter />
     {/* Brand Data */}
     {/* <div className="w-full  px-5 md:px-10 mx-auto">
@@ -117,6 +121,9 @@ export const getServerSideProps = async () => {
   const brandsQuery = '*[_type == "brands"]';
   const brands = await client.fetch(brandsQuery);
 
+  const brands2Query = '*[_type == "brands2"]';
+  const brands2 = await client.fetch(brands2Query);
+
   const bannerQuery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerQuery);
 
@@ -132,6 +139,7 @@ export const getServerSideProps = async () => {
     props: {
       categories,
       brands,
+      brands2,
       miniBannerData,
       featureProductsData,
       bannerData,
